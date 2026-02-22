@@ -11,12 +11,12 @@ public class Territory extends Region {
         this.subTerritories = subTerritories;
     }
 
-    public List<String> subNames() {
-        List<String> names = new ArrayList<>();
+    public List<Unit> subGoals() {
+        List<Unit> goals = new ArrayList<>();
         for (SubTerritory subTerritory : subTerritories) {
-            names.add(subTerritory.getName());
+            goals.add(subTerritory.getGoal());
         }
-        return names;
+        return goals;
     }
 
     @Override

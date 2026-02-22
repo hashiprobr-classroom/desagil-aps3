@@ -1,21 +1,20 @@
 package br.edu.insper.desagil.aps3.horizon;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SubTerritory extends Region {
-    private List<Point> points;
+    private Unit goal;
     private Map<Point, Unit> units;
 
-    public SubTerritory(String name, List<Point> points) {
+    public SubTerritory(String name, Unit goal) {
         super(name);
-        this.points = points;
+        this.goal = goal;
         this.units = new HashMap<>();
     }
 
-    public List<Point> getPoints() {
-        return points;
+    public Unit getGoal() {
+        return goal;
     }
 
     public Map<Point, Unit> getUnits() {
